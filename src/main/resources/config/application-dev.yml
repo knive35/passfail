@@ -34,7 +34,7 @@ spring:
   application: {name: passfail}
   couchbase:
     bucket: {password: password@1234, name: default}
-    bootstrap-hosts: couchbase-example.eonsmartcamera-dev
+    bootstrap-hosts: cb-example.softwaretesting
   kafka:
     producer: {bootstrap-servers: http://my-cluster-kafka-bootstrap-softwaretesting.52.172.12.252.nip.io , value-serializer: org.apache.kafka.common.serialization.StringSerializer,
       key-serializer: org.apache.kafka.common.serialization.StringSerializer}
