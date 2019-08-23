@@ -24,7 +24,7 @@ spring:
                 key: {serde: org.apache.kafka.common.serialization.Serdes$StringSerde}
               commit:
                 interval: {ms: 1000}
-            zkNodes: 	http://my-cluster-zookeeper-nodes-softwaretesting.52.172.12.252.nip.io
+              zkNodes: 	http://my-cluster-zookeeper-nodes-softwaretesting.52.172.12.252.nip.io
         binder: {brokers: http://my-cluster-kafka-brokers-softwaretesting.52.172.12.252.nip.io , zkNodes: 	http://my-cluster-zookeeper-nodes-softwaretesting.52.172.12.252.nip.io}
       bindings:
         binding2: {destination: passfail-source}
