@@ -17,15 +17,15 @@ spring:
       kafka:
         streams:
           binder:
-            brokers: 'my-cluster-kafka-brokers-softwaretesting.52.172.12.252.nip.io'
+            brokers: '172.30.193.151:9092'
             configuration:
               default:
                 value: {serde: org.apache.kafka.common.serialization.Serdes$StringSerde}
                 key: {serde: org.apache.kafka.common.serialization.Serdes$StringSerde}
               commit:
                 interval: {ms: 1000}
-            zkNodes: 'my-cluster-zookeeper-nodes-softwaretesting.52.172.12.252.nip.io'
-        binder: {brokers: 'my-cluster-kafka-brokers-softwaretesting.52.172.12.252.nip.io' , zkNodes: 'my-cluster-zookeeper-nodes-softwaretesting.52.172.12.252.nip.io'}
+            zkNodes: '172.30.138.93:2181'
+        binder: {brokers: '172.30.193.151:9092' , zkNodes: '172.30.138.93:2181'}
       bindings:
         binding2: {destination: passfail-source}
         singleOutput: {destination: passfail-destination}
@@ -36,10 +36,10 @@ spring:
     bucket: {password: password@1234, name: default}
     bootstrap-hosts: cb-example.softwaretesting
   kafka:
-    producer: {bootstrap-servers: 'my-cluster-kafka-brokers-softwaretesting.52.172.12.252.nip.io' , value-serializer: org.apache.kafka.common.serialization.StringSerializer,
+    producer: {bootstrap-servers: '172.30.193.151:9092' , value-serializer: org.apache.kafka.common.serialization.StringSerializer,
       key-serializer: org.apache.kafka.common.serialization.StringSerializer}
     consumer: {value-deserializer: org.apache.kafka.common.serialization.StringDeserializer,
-      group-id: group_id, auto-offset-reset: earliest, bootstrap-servers: 'my-cluster-kafka-brokers-softwaretesting.52.172.12.252.nip.io',
+      group-id: group_id, auto-offset-reset: earliest, bootstrap-servers: '172.30.193.151:9092',
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer}
   messages: {cache-duration: PT1S}
   jpa:
