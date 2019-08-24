@@ -28,9 +28,12 @@ public class KafkaConnect {
 	@ResponseBody
 	public List<String> getConnectors() throws Exception {
 		RestTemplate restTemplate=new RestTemplate();
+        System.out.println(connectUrl);
 		List<String> ans;
-		ans=restTemplate.getForObject(connectUrl, List.class);  //change it
-		return ans;
+		ans=restTemplate.getForObject(connectUrl, List.class); 
+        //change it
+		System.out.println(ans);
+        return ans;
 	}
 	@POST
 	@RequestMapping("/createConnectors")
