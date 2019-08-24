@@ -36,10 +36,10 @@ spring:
     bucket: {password: password@1234, name: default}
     bootstrap-hosts: cb-example.softwaretesting
   kafka:
-    producer: {bootstrap-servers: 'http://my-cluster-kafka-bootstrap-softwaretesting.52.172.12.252.nip.io' , value-serializer: org.apache.kafka.common.serialization.StringSerializer,
+    producer: {bootstrap-servers: 'http://my-cluster-kafka-brokers-softwaretesting.52.172.12.252.nip.io' , value-serializer: org.apache.kafka.common.serialization.StringSerializer,
       key-serializer: org.apache.kafka.common.serialization.StringSerializer}
     consumer: {value-deserializer: org.apache.kafka.common.serialization.StringDeserializer,
-      group-id: group_id, auto-offset-reset: earliest, bootstrap-servers: 'http://my-cluster-kafka-bootstrap-softwaretesting.52.172.12.252.nip.io',
+      group-id: group_id, auto-offset-reset: earliest, bootstrap-servers: 'http://my-cluster-kafka-brokers-softwaretesting.52.172.12.252.nip.io',
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer}
   messages: {cache-duration: PT1S}
   jpa:
